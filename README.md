@@ -1,3 +1,9 @@
+# Destinations
+## Help me keep track of travel destinations from MSP (possibly scalable to other airports) to regions I want to explore and the cheapest flights from the Google Flights API
+
+# Technologies
+## NextJS, Javascript, Python, Tailwind CSS
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
