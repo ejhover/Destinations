@@ -1,0 +1,89 @@
+.home-container {
+  min-height: 100vh;
+  padding: 2rem 2rem 5rem 2rem;
+  font-family: var(--font-geist-sans, sans-serif);
+  background: #f9fafb;
+}
+
+.hover-box {
+  border: 2px solid #3b82f6;
+  transition: transform 0.3s;
+  color: #000;
+  font-size: 2rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  margin-bottom: 2rem;
+  width: fit-content;
+}
+.hover-box:hover {
+  transform: scale(1.1);
+}
+
+.flights-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  /* Removed max-height and overflow-y to allow full page flow */
+}
+
+.flight-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 2px solid #000;
+  padding: 1.5rem;
+  max-width: 28rem;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.flight-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+}
+
+.flight-logo {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  min-height: 3rem;
+  max-width: 4rem;
+  max-height: 4rem;
+  flex-shrink: 0;
+}
+@media (min-width: 640px) {
+  .flight-logo {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.flight-logo-img {
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.flight-info {
+  flex: 1;
+}
+.flight-route {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #000;
+}
+.flight-airline {
+  color: #374151;
+  font-weight: 500;
+}
+.flight-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2563eb;
+}
