@@ -1,6 +1,12 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 .home-container {
   min-height: 100vh;
-  padding: 2rem 2rem 5rem 2rem;
+  margin: 0;
+  padding: 0rem 3rem 5rem 0rem;
   font-family: var(--font-geist-sans, sans-serif);
   background: #f9fafb;
 }
@@ -13,11 +19,12 @@
   background: #fff;
   padding: 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   margin-bottom: 2rem;
   width: fit-content;
 }
+
 .hover-box:hover {
   transform: scale(1.1);
 }
@@ -27,13 +34,13 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  /* Removed max-height and overflow-y to allow full page flow */
+  margin-top: 2rem;
 }
 
 .flight-card {
   background: #fff;
   border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 2px solid #000;
   padding: 1.5rem;
   max-width: 28rem;
@@ -44,9 +51,10 @@
   gap: 1rem;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .flight-card:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
 }
 
 .flight-logo {
@@ -59,12 +67,14 @@
   max-height: 4rem;
   flex-shrink: 0;
 }
+
 @media (min-width: 640px) {
   .flight-logo {
     width: 4rem;
     height: 4rem;
   }
 }
+
 .flight-logo-img {
   border-radius: 50%;
   object-fit: contain;
@@ -73,17 +83,91 @@
 .flight-info {
   flex: 1;
 }
+
 .flight-route {
   font-size: 1.125rem;
   font-weight: 600;
   color: #000;
 }
+
 .flight-airline {
   color: #374151;
   font-weight: 500;
 }
+
 .flight-price {
   font-size: 1.25rem;
   font-weight: bold;
   color: #2563eb;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2563eb;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-logo {
+  border-radius: 50%;
+  background: #fff;
+}
+
+.navbar-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-search {
+  width: 300px;
+  max-width: 90vw;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-btn {
+  background: #fff;
+  color: #2563eb;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-btn:hover {
+  background: #1e40af;
+  color: #fff;
+
 }

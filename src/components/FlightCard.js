@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "../../styles/styles.css";
+import "@/styles/styles.css";
 
 export default function FlightCard({ price, from, to, airlineLogo, airlineName }) {
   return (
