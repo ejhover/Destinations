@@ -8,7 +8,7 @@ body, html {
   margin: 0;
   padding: 0rem 3rem 5rem 0rem;
   font-family: var(--font-geist-sans, sans-serif);
-  background: #f9fafb;
+  background: #e6e6e6;
 }
 
 .hover-box {
@@ -38,7 +38,7 @@ body, html {
 }
 
 .flight-card {
-  background: #fff;
+  background: #d7d5d5;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 2px solid #000;
@@ -47,9 +47,10 @@ body, html {
   width: 100%;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s, max-height 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
 .flight-card:hover {
@@ -98,7 +99,7 @@ body, html {
 .flight-price {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #2563eb;
+  color: #000000;
 }
 
 .navbar {
@@ -106,7 +107,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #2563eb;
+  background: #121213;
   padding: 0.75rem 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   position: sticky;
@@ -156,7 +157,7 @@ body, html {
 
 .navbar-btn {
   background: #fff;
-  color: #2563eb;
+  color: #000000;
   border: none;
   border-radius: 999px;
   padding: 0.5rem 1.2rem;
@@ -167,7 +168,64 @@ body, html {
 }
 
 .navbar-btn:hover {
-  background: #1e40af;
+  background: #8b8b8b;
   color: #fff;
+}
 
+.flight-card-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flight-dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+  z-index: 2;
+}
+
+.flight-dropdown-btn:focus {
+  outline: none;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+.flight-card-details {
+  margin-top: 1rem;
+  background: #ececec;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #222;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.navbar-airport-dropdown {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+.navbar-airport-label {
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-top: 0.4rem;
 }
